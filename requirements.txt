@@ -1,0 +1,9 @@
+google-play-scraper
+sastrawi
+vaderSentiment
+pandas
+numpy
+sklearn
+matplotlib
+seaborn
+nltk
