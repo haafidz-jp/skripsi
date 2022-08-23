@@ -1,5 +1,7 @@
 import streamlit as st
 
+df0012 = pd.read_csv('MyIndi_clean_data.csv')
+
 # menghitung vector
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
