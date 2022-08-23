@@ -133,3 +133,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 #plt.title("Plot Sentiment dari dataset")
 st.markdown('Plot Sentiment dari dataset')
 st.pyplot(plt.show())
+
+st.markdown('Export clean data csv')
+df0012_data.to_csv("MyIndi_clean_data.csv", index = False)
