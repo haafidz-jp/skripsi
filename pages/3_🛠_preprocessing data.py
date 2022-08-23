@@ -136,3 +136,4 @@ st.pyplot(plt.show())
 
 st.markdown('Export clean data csv')
 df0012_data.to_csv("MyIndi_clean_data.csv", index = False)
+st.code('df0012_data.to_csv("MyIndi_clean_data.csv", index = False)')
