@@ -112,7 +112,7 @@ def stem_list(row) :
 
 df0012_data['content'] = df0012_data.apply(stem_list, axis = 1)
 st.markdown('data setelah di stemming:')
-st.markdown(df0012_data.content)
+st.write(df0012_data.content)
 
 
 # stopword (menghapus kata yang tidak penting)
@@ -122,7 +122,7 @@ nltk.download('stopwords')
 #from nltk.tokenize import word_tokenize
 stops = set(stopwords.words('indonesian'))
 
-st.markdown('keadaan data saat ini')
+st.markdown('Tampilkan data saat ini')
 st.dataframe(df0012_data.head())
 
 st.markdown('Jumlah data Sentimen')
