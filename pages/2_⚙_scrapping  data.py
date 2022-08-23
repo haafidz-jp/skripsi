@@ -39,5 +39,7 @@ data0012_scrape = data0012_sorted[['userName', 'score', 'at', 'content']] # get 
 
 st.dataframe(data0012_scrape.head())
 
+st.markdown('Menyimpan data yang sudah di scrapping ke file csv.')
+st.code('data0012_scrape.to_csv("MyIndi_scrape_data.csv", index = False)')
 data0012_scrape.to_csv("MyIndi_scrape_data.csv", index = False)
 
