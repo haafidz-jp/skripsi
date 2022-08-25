@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 #import csv
-df0012 = pd.read_csv('MyIndi_clean_data.csv')
+df0012 = pd.read_csv('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/MyIndi_clean_data.csv')
 
 # menghitung vector
 from sklearn.feature_extraction.text import CountVectorizer
