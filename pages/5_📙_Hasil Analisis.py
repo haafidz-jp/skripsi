@@ -14,7 +14,7 @@ import string
 df0012 = pd.read_csv('Text_Preprocessing.csv')
 
 st.markdown('#### Tampilan Word Cloud untuk semua kata yang ada di dataset')
-st.image('wcall.png')
+st.image('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/wcall.png')
 # tweet_list = pd.read_csv('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/MyIndi_cleaning_data.csv')
 # st.dataframe(tweet_list.head(5))
 
@@ -47,15 +47,15 @@ st.image('wcall.png')
 
 
 st.markdown('#### Word Cloud kata Positif')
-st.image('wcpos.png')
+st.image('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/wcpos.png')
 # st.write(create_wordcloud(rv_list_positive["content"].values))
 
 
 st.markdown('#### Word Cloud kata Negatif')
-st.image('wcneg.png')
+st.image('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/wcneg.png')
 # st.write(create_wordcloud(rv_list_negative["content"].values))
 
-st.markdown('#### Most Used Word')
+st.markdown('#### Kata yang sering muncul di dataset')
 
 # mengubah menjadi vector term
 from sklearn.feature_extraction.text import CountVectorizer
