@@ -14,7 +14,7 @@ import seaborn as sn
 import pickle
 import time
 
-df0012 = pd.read_csv('MyIndi_scrape_data.csv')
+df0012 = pd.read_csv('https://raw.githubusercontent.com/haafidz-jp/skripsi/master/MyIndi_scrape_data.csv')
 st.dataframe(df0012.head(5))
 
 #mengubah nilai skor menjadi positif atau negatif
@@ -78,6 +78,19 @@ df0012_data['content'] = df0012_data['content'].str.replace('\s(2)', ' ', case =
 
 st.markdown('Data setelah di cleaning:')
 st.dataframe(df0012_data.content)
+df0012_data.to_csv("MyIndi_cleaning_data.csv", index = False)
+
+st.markdown('data sentimen negatif')
+#export csv data cleaning negatif
+rv_list_negative = df0012_data[df0012_data['sentiment'] == '-1']
+rv_list_negative.to_csv("negreview.csv", index = False)
+st.dataframe(rv_list_negative)
+
+st.markdown('data sentimen positif')
+#export csv data cleaning positif
+rv_list_positive = df0012_data[df0012_data['sentiment'] == '1']
+rv_list_positive.to_csv("posreview.csv", index = False)
+st.dataframe(rv_list_positive)
 
 
 st.markdown('Contoh data yang sudah di tokenize')
@@ -135,5 +148,5 @@ st.markdown('Plot Sentiment dari dataset')
 st.pyplot(plt.show())
 
 st.markdown('Export clean data csv')
-df0012_data.to_csv("MyIndi_clean_data.csv", index = False)
+# df0012_data.to_csv("MyIndi_clean_data.csv", index = False)
 st.code('df0012_data.to_csv("MyIndi_clean_data.csv", index = False)')
