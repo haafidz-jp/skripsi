@@ -82,12 +82,24 @@ count_vect_df = pd.DataFrame(countVector.toarray(), columns=countVectorizer.get_
 # Most Used Words
 count = pd.DataFrame(count_vect_df.sum())
 countdf = count.sort_values(0,ascending=False).head(20)
-countdf[1:11]
+countdf[:]
 
-# st.markdown('#### Most Used Positive Word')
+st.markdown('#### Most Used Positive Word')
+countdf[5:11]
 
+st.markdown('#### Most Used Negative Word')
+countdf[10:20]
 
-# st.markdown('#### Most Used Negative Word')
+st.markdown('#### Pie Chart')
+# Plotting matplotlib
+import matplotlib.pyplot as plt
 
+labels = ["Positif", "Negatif"]
+sizes = [2056, 944]
+explode = (0.1,0)
 
-# st.markdown('#### Pie Chart')
+fig, ax = plt.subplots(figsize=(10,10))
+ax.pie(sizes, explode=explode,labels=labels,shadow=True, autopct="%1.1f%%")
+ax.axis("equal")
+
+st.pyplot(fig)
