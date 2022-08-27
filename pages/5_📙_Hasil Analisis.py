@@ -5,7 +5,7 @@ import streamlit as st
 # import numpy as np
 # from PIL import Image
 import nltk
-# nltk.download('stopwords')
+nltk.download('stopwords')
 import pandas as pd
 # from IPython.display import display
 import re
